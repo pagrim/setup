@@ -25,9 +25,8 @@ brew install --cask pycharm
 
 # Set terminal appearance
 source set-colors.sh
-cp colors.csv $HOME/.colors.csv
-set_foreground_color white
-set_background_color black
+set_foreground_color "{65535, 65535, 65535}"
+set_background_color "{0, 0, 0}"
 set_font "Monaco" 14
 
 # Create passwordless ssh rsa key
