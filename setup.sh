@@ -35,8 +35,8 @@ git config --global user.email $EMAIL
 git config --global pull.rebase false # Merge instead of rebase
 
 ## Git summary
-mkdir $HOME/utils
-git clone https://github.com/MirkoLedda/git-summary.git $HOME/utils
+mkdir -p $HOME/utils/git-summary
+git clone https://github.com/MirkoLedda/git-summary.git $HOME/utils/git-summary
 
 # Vim setup
 cp .vimrc $HOME/.vimrc
@@ -49,7 +49,7 @@ pyenv global $PYENV_SYS_PYTHON
 cp vs_code_settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
 # Personal utils
-git clone git@github.com:pagrim/utils.git
+git clone git@github.com:pagrim/utils.git $HOME/utils
 
 # Create pyenv environment for handling jupyter notebooks (referenced in utils above)
 PYENV_JUPYTER_ENV=jupyter-$PYENV_SYS_PYTHON
