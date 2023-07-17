@@ -7,7 +7,6 @@ PYENV_SYS_PYTHON=3.9.0
 # Bash setup
 cp .bashrc $HOME/.bashrc
 cp .bash_profile $HOME/.bash_profile
-cp set-colors.sh $HOME/.set-colors.sh
 
 # Install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -44,14 +43,13 @@ pyenv global $PYENV_SYS_PYTHON
 cp vs_code_settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
 # Personal utils
-git clone git@github.com:pagrim/utils.git $HOME/utils
+git clone git@github.com:pagrim/utils.git $HOME/utils/utilities
 
 # Create pyenv environment for handling jupyter notebooks (referenced in utils above)
 PYENV_JUPYTER_ENV=jupyter-$PYENV_SYS_PYTHON
-echo "export $PYENV_JUPYTER_ENV" >> $HOME/.bash_profile
+echo "export PYENV_JUPYTER_ENV=$PYENV_JUPYTER_ENV" >> $HOME/.bash_profile
 pyenv virtualenv $PYENV_SYS_PYTHON $PYENV_JUPYTER_ENV
 
 # Source files
 source $HOME/.bashrc
 source $HOME/.bash_profile
-source $HOME/.vimrc
