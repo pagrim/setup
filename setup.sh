@@ -1,6 +1,6 @@
 #!/bin/sh
-NAME=$1
-EMAIL=$2
+NAME="$1"
+EMAIL="$2"
 
 PYENV_SYS_PYTHON=3.9.0
 
@@ -8,6 +8,8 @@ PYENV_SYS_PYTHON=3.9.0
 cp .bashrc $HOME/.bashrc
 cp .bash_profile $HOME/.bash_profile
 
+# Install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Brew installs
 brew update
