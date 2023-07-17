@@ -1,10 +1,10 @@
 git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'; }
 short_location () { pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"; }
 
-TIME='\e[37m\t\e[m ' # light grey
-USER='\e[35m\u\e[m ' # magenta
-HOST='\e[36m\h\e[m ' # cyan
-LOCATION='\e[34m$(short_location)\e[m ' # blue
-BRANCH='\e[00;33m$(git_branch)\e[m\n\$ ' # yellow
+TIME='\[\033[37m\]\t \[\033[m\]' # light grey
+USER='\[\033[35m\]\u \[\033[m\]' # magenta
+HOST='\[\033[36m\]\h \[\033[m\]' # cyan
+LOCATION='\[\033[34m\]$(short_location) \[\033[m\]' # blue
+BRANCH='\[\033[33m\]$(git_branch)\[\033[m\]\n\$ ' # yellow
 PS1=$TIME$USER$HOST$LOCATION$BRANCH
 PS2='\[\033[01;36m\]>'
