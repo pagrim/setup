@@ -3,7 +3,6 @@ NAME=$1
 EMAIL=$2
 
 PYENV_SYS_PYTHON=3.9.0
-PYENV_HOME=$HOME/.pyenv
 
 # Bash setup
 cp .bashrc $HOME/.bashrc
@@ -13,7 +12,6 @@ cp .bash_profile $HOME/.bash_profile
 # Brew installs
 brew update
 brew install bash
-brew install git
 brew install jq
 brew install code
 brew install bash-completion@2
@@ -49,7 +47,7 @@ pyenv global $PYENV_SYS_PYTHON
 cp vs_code_settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
 # Personal utils
-git clone https://github.com/pagrim/utils.git
+git clone git@github.com:pagrim/utils.git
 
 # Create pyenv environment for handling jupyter notebooks (referenced in utils above)
 PYENV_JUPYTER_ENV=jupyter-$PYENV_SYS_PYTHON
