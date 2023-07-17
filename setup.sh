@@ -7,6 +7,7 @@ PYENV_SYS_PYTHON=3.9.0
 # Bash setup
 cp .bashrc $HOME/.bashrc
 cp .bash_profile $HOME/.bash_profile
+cp set-colors.sh $HOME/.set-colors.sh
 
 # Install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -22,12 +23,6 @@ brew install pyenv
 brew install pyenv-virtualenv
 brew install --cask visual-studio-code
 brew install --cask pycharm
-
-# Set terminal appearance
-source set-colors.sh
-set_foreground_color "{65535, 65535, 65535}"
-set_background_color "{0, 0, 0}"
-set_font "Monaco" 14
 
 # Git setup
 git config --global user.name $NAME
