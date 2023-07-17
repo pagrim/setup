@@ -29,10 +29,6 @@ set_foreground_color "{65535, 65535, 65535}"
 set_background_color "{0, 0, 0}"
 set_font "Monaco" 14
 
-# Create passwordless ssh rsa key
-mkdir $HOME/.ssh
-ssh-keygen -t rsa -N "" -f $HOME/.ssh/id_rsa
-
 # Git setup
 git config --global user.name $NAME
 git config --global user.email $EMAIL
