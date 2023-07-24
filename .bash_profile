@@ -12,4 +12,6 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-source ~/.bashrc
+source $HOME/.bashrc
+source $HOME/utils/utilities/util_venv.sh
+source $HOME/utils/utilities/start_jupyter_notebook.sh

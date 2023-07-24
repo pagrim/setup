@@ -43,8 +43,8 @@ pyenv global $PYENV_SYS_PYTHON
 # Visual Studio
 cp vs_code_settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
-# Personal utils
-git clone git@github.com:pagrim/utils.git $HOME/utils/utilities
+# Copy utils
+cp utilities/*.sh $HOME/utils/utilities
 
 # Create pyenv environment for handling jupyter notebooks (referenced in utils above)
 PYENV_JUPYTER_ENV=jupyter-$PYENV_SYS_PYTHON
