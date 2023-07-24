@@ -7,4 +7,9 @@ alias git-summary=$HOME/utils/git-summary/git-summary
 # Bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
+# Git completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 source ~/.bashrc

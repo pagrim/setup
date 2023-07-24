@@ -18,6 +18,7 @@ brew install jq
 brew install code
 brew install bash-completion@2
 brew install coreutils  # Needed for git-summary
+brew install xz  # Needed for pyenv setup
 brew install pyenv
 brew install pyenv-virtualenv
 brew install --cask visual-studio-code
