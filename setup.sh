@@ -25,9 +25,9 @@ brew install --cask visual-studio-code
 brew install --cask pycharm
 
 # Git setup
-git config --global user.name $NAME
-git config --global user.email $EMAIL
-git config --global pull.rebase false # Merge instead of rebase
+git config --global --replace-all user.name "$NAME"
+git config --global --replace-all user.email "$EMAIL"
+git config --global --replace-all pull.rebase false # Merge instead of rebase
 
 ## Git summary
 mkdir -p $HOME/utils/git-summary
