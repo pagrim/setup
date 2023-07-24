@@ -34,7 +34,10 @@ mkdir -p $HOME/utils/git-summary
 git clone https://github.com/MirkoLedda/git-summary.git $HOME/utils/git-summary
 
 # Vim setup
-cp .vimrc $HOME/.vimrc
+cp .vimrc $HOME
+
+# Screen setup
+cp .screenrc $HOME
 
 # Pyenv setup
 pyenv install $PYENV_SYS_PYTHON
@@ -50,6 +53,9 @@ cp utilities/*.sh $HOME/utils/utilities
 PYENV_JUPYTER_ENV=jupyter-$PYENV_SYS_PYTHON
 echo "export PYENV_JUPYTER_ENV=$PYENV_JUPYTER_ENV" >> $HOME/.bash_profile
 pyenv virtualenv $PYENV_SYS_PYTHON $PYENV_JUPYTER_ENV
+pyenv activate $PYENV_JUPYTER_ENV
+pip install jupyter
+source deactivate
 
 # Source files
 source $HOME/.bashrc
