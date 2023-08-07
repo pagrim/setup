@@ -16,6 +16,8 @@ brew update
 brew install bash
 brew install jq
 brew install code
+brew install tree
+brew install graphviz
 brew install bash-completion@2
 brew install coreutils  # Needed for git-summary
 brew install xz  # Needed for pyenv setup
@@ -54,6 +56,7 @@ PYENV_JUPYTER_ENV=jupyter-$PYENV_SYS_PYTHON
 echo "export PYENV_JUPYTER_ENV=$PYENV_JUPYTER_ENV" >> $HOME/.bash_profile
 pyenv virtualenv $PYENV_SYS_PYTHON $PYENV_JUPYTER_ENV
 pyenv activate $PYENV_JUPYTER_ENV
+pip install -U pip
 pip install jupyter
 source deactivate
 
