@@ -22,7 +22,7 @@ function util_venv () {
   if [ -f $DEV_REQ ]; then
     pip install -r $DEV_REQ
   elif [ -f $REQ ]; then
-    pip install $REQ
+    pip install -r $REQ
   fi
 
 }
