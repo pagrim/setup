@@ -25,16 +25,19 @@ brew install --cask visual-studio-code
 brew install --cask pycharm
 
 # Git setup
-git config --global user.name $NAME
-git config --global user.email $EMAIL
-git config --global pull.rebase false # Merge instead of rebase
+git config --global --replace-all user.name "$NAME"
+git config --global --replace-all user.email "$EMAIL"
+git config --global --replace-all pull.rebase false # Merge instead of rebase
 
 ## Git summary
 mkdir -p $HOME/utils/git-summary
 git clone https://github.com/MirkoLedda/git-summary.git $HOME/utils/git-summary
 
 # Vim setup
-cp .vimrc $HOME/.vimrc
+cp .vimrc $HOME
+
+# Screen setup
+cp .screenrc $HOME
 
 # Pyenv setup
 pyenv install $PYENV_SYS_PYTHON
@@ -43,13 +46,16 @@ pyenv global $PYENV_SYS_PYTHON
 # Visual Studio
 cp vs_code_settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
-# Personal utils
-git clone git@github.com:pagrim/utils.git $HOME/utils/utilities
+# Copy utils
+cp utilities/*.sh $HOME/utils/utilities
 
 # Create pyenv environment for handling jupyter notebooks (referenced in utils above)
 PYENV_JUPYTER_ENV=jupyter-$PYENV_SYS_PYTHON
 echo "export PYENV_JUPYTER_ENV=$PYENV_JUPYTER_ENV" >> $HOME/.bash_profile
 pyenv virtualenv $PYENV_SYS_PYTHON $PYENV_JUPYTER_ENV
+pyenv activate $PYENV_JUPYTER_ENV
+pip install jupyter
+source deactivate
 
 # Source files
 source $HOME/.bashrc
