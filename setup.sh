@@ -23,8 +23,6 @@ brew install coreutils  # Needed for git-summary
 brew install xz  # Needed for pyenv setup
 brew install pyenv
 brew install pyenv-virtualenv
-brew install --cask visual-studio-code
-brew install --cask pycharm
 
 # Git setup
 git config --global --replace-all user.name "$NAME"
@@ -44,9 +42,6 @@ cp .screenrc $HOME
 # Pyenv setup
 pyenv install $PYENV_SYS_PYTHON
 pyenv global $PYENV_SYS_PYTHON
-
-# Visual Studio
-cp vs_code_settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
 # Copy utils
 cp utilities/*.sh $HOME/utils/utilities
