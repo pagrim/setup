@@ -44,6 +44,7 @@ pyenv install $PYENV_SYS_PYTHON
 pyenv global $PYENV_SYS_PYTHON
 
 # Copy utils
+mkdir $HOME/utils/utilities
 cp utilities/*.sh $HOME/utils/utilities
 
 # Create pyenv environment for handling jupyter notebooks (referenced in utils above)
