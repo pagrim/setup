@@ -39,6 +39,10 @@ cp .vimrc $HOME
 # Screen setup
 cp .screenrc $HOME
 
+# Bash completion
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+chmod +x ~/.git-completion.bash
+
 # Pyenv setup
 pyenv install $PYENV_SYS_PYTHON
 pyenv global $PYENV_SYS_PYTHON
