@@ -13,12 +13,13 @@ function util_venv () {
   DEV_REQ=requirements-dev.txt
   REQ=requirements.txt
 
-  if [ -d .venv ]; then
-    . .venv/bin/activate
-  else
-    python3 -m venv .venv
+  if [ ! -d .venv ]; then
+    python3 -m venv .venv 
   fi
 
+  . .venv/bin/activate
+  pip install -U pip
+  
   if [ -f $DEV_REQ ]; then
     pip install -r $DEV_REQ
   elif [ -f $REQ ]; then
