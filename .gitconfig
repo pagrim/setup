@@ -12,6 +12,8 @@
 	plo = log --pretty=format:'%Cred%h%Creset - %Creset%s %Cgreen%cd %Cblue%an' --date=human -n  
 	olog = log --oneline -n
 	aa = add .
-
+	pu = push
+	ds = diff --stat
+	dc = diff --cached
 [push]
 	autoSetupRemote = true
