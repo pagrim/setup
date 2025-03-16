@@ -13,3 +13,5 @@
 	olog = log --oneline -n
 	aa = add .
 
+[push]
+	autoSetupRemote = true
