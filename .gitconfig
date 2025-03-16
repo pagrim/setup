@@ -1,0 +1,15 @@
+[user]
+	name = xxx
+	email = xxx 
+[pull]
+	rebase = false
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	plg = log --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d %Creset%s %Cgreen%cd %Cblue%an' --date=human
+	plo = log --pretty=format:'%Cred%h%Creset - %Creset%s %Cgreen%cd %Cblue%an' --date=human -n  
+	olog = log --oneline -n
+	aa = add .
+
