@@ -15,5 +15,6 @@
 	pu = push
 	ds = diff --stat
 	dc = diff --cached
+	pl = pull
 [push]
 	autoSetupRemote = true
