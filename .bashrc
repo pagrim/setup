@@ -1,5 +1,5 @@
 git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'; }
-short_location () { pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"; }
+short_location () { pwd | sed 's#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g'; }
 
 # Variables below are P for prompt to avoid overriding environment vars used by other processes
 PTIME='\[\033[37m\]\t \[\033[m\]' # light grey
