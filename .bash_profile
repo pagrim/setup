@@ -12,6 +12,9 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+
 source $HOME/.bashrc
 source $HOME/utils/utilities/util_venv.sh
 source $HOME/utils/utilities/start_jupyter_notebook.sh
