@@ -12,6 +12,10 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+if [ -f ~/.git-prompt.sh ]; then
+  . ~/.git-prompt.sh
+fi
+
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 
